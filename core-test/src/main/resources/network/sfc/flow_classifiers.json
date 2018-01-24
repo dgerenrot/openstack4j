@@ -1,7 +1,10 @@
 {
     "flow_classifiers": [
         {
+<<<<<<< HEAD
             "id" : "0abcdef",
+=======
+>>>>>>> Added builder() method, moved testjson objects. Added a test.
             "name": "FC1",
             "project_id": "12345678909876543210abcdefabcdef",
             "tenant_id": "12345678909876543210abcdefabcdef",
@@ -14,12 +17,18 @@
             "destination_port_range_max": 80,
             "source_ip_prefix": null,
             "destination_ip_prefix": "10.20.30.40",
+<<<<<<< HEAD
             "logical_destination_port": "12345678-abcd-abcd-abcd-abcdefabcdef",
+=======
+>>>>>>> Added builder() method, moved testjson objects. Added a test.
             "logical_source_port": "abcdefab-abcd-abcd-abcd-abcdefabcdef",
             "l7_parameters": { "aparam":"A"}
         },
         {
+<<<<<<< HEAD
             "id" : "1fedcba",
+=======
+>>>>>>> Added builder() method, moved testjson objects. Added a test.
             "name": "FC2",
             "project_id": "12345678909876543210abcdefabcdef",
             "tenant_id": "12345678909876543210abcdefabcdef",
@@ -32,7 +41,10 @@
             "destination_port_range_max": 80,
             "source_ip_prefix": null,
             "destination_ip_prefix": "50.60.70.80",
+<<<<<<< HEAD
             "logical_destination_port": "12345678-abcd-abcd-abcd-abcdefabcdef",
+=======
+>>>>>>> Added builder() method, moved testjson objects. Added a test.
             "logical_source_port": "abcdefab-abcd-abcd-abcd-abcdefabcdef",
             "l7_parameters": { "bparam":"B"}
         }
