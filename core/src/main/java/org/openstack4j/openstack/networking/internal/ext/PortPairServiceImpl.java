@@ -7,6 +7,8 @@ import java.util.List;
 import org.openstack4j.api.networking.ext.PortPairService;
 import org.openstack4j.model.common.ActionResponse;
 import org.openstack4j.model.network.ext.PortPair;
+import org.openstack4j.openstack.networking.domain.ext.NeutronPortPair;
+import org.openstack4j.openstack.networking.domain.ext.NeutronPortPair.PortPairs;
 import org.openstack4j.openstack.networking.internal.BaseNetworkingServices;
 
 /**
@@ -57,5 +59,4 @@ public class PortPairServiceImpl extends BaseNetworkingServices implements PortP
         checkNotNull(portPairId);
         return put(NeutronPortPair.class, uri("/sfc/port_pairs/%s", portPairId)).entity(portPair).execute();
     }
-
 }

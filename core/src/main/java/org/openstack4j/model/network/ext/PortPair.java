@@ -2,7 +2,7 @@ package org.openstack4j.model.network.ext;
 
 import org.openstack4j.common.Buildable;
 import org.openstack4j.model.common.Resource;
-import org.openstack4j.model.network.ext.builder.FlowClassifierBuilder;
+import org.openstack4j.model.network.ext.builder.PortPairBuilder;
 
 /**
  * A Port Pair Entity.
@@ -10,7 +10,7 @@ import org.openstack4j.model.network.ext.builder.FlowClassifierBuilder;
  * @author Dmitry Gerenrot.
  *
  */
-public interface PortPair extends Resource, Buildable<FlowClassifierBuilder> {
+public interface PortPair extends Resource, Buildable<PortPairBuilder> {
 
     /**
      * @return id : Port Pair  identifer

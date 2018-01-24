@@ -107,6 +107,7 @@ import org.openstack4j.api.networking.ext.LoadBalancerService;
 import org.openstack4j.api.networking.ext.LoadBalancerV2Service;
 import org.openstack4j.api.networking.ext.MemberService;
 import org.openstack4j.api.networking.ext.NetQuotaService;
+import org.openstack4j.api.networking.ext.PortPairService;
 import org.openstack4j.api.networking.ext.SFCService;
 import org.openstack4j.api.networking.ext.VipService;
 import org.openstack4j.api.octavia.OctaviaService;
@@ -167,7 +168,15 @@ import org.openstack4j.api.trove.DatastoreService;
 import org.openstack4j.api.trove.InstanceFlavorService;
 import org.openstack4j.api.trove.InstanceService;
 import org.openstack4j.api.trove.TroveService;
-import org.openstack4j.api.workflow.*;
+import org.openstack4j.api.workflow.ActionDefinitionService;
+import org.openstack4j.api.workflow.ActionExecutionService;
+import org.openstack4j.api.workflow.CronTriggerService;
+import org.openstack4j.api.workflow.TaskExecutionService;
+import org.openstack4j.api.workflow.WorkbookDefinitionService;
+import org.openstack4j.api.workflow.WorkflowDefinitionService;
+import org.openstack4j.api.workflow.WorkflowEnvironmentService;
+import org.openstack4j.api.workflow.WorkflowExecutionService;
+import org.openstack4j.api.workflow.WorkflowService;
 import org.openstack4j.openstack.artifact.internal.ArtifactServiceImpl;
 import org.openstack4j.openstack.artifact.internal.ToscaTemplatesArtifactServiceImpl;
 import org.openstack4j.openstack.barbican.internal.BarbicanServiceImpl;
@@ -271,6 +280,7 @@ import org.openstack4j.openstack.networking.internal.ext.LoadBalancerServiceImpl
 import org.openstack4j.openstack.networking.internal.ext.LoadBalancerV2ServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.MemberServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.NetQuotaServiceImpl;
+import org.openstack4j.openstack.networking.internal.ext.PortPairServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.SFCServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.VipServiceImpl;
 import org.openstack4j.openstack.octavia.internal.OctaviaServiceImpl;
@@ -330,9 +340,17 @@ import org.openstack4j.openstack.trove.internal.DBFlavorServiceImpl;
 import org.openstack4j.openstack.trove.internal.DBInstanceServiceImpl;
 import org.openstack4j.openstack.trove.internal.DBUserServiceImpl;
 import org.openstack4j.openstack.trove.internal.TroveServiceImpl;
+import org.openstack4j.openstack.workflow.internal.ActionDefinitionServiceImpl;
+import org.openstack4j.openstack.workflow.internal.ActionExecutionServiceImpl;
+import org.openstack4j.openstack.workflow.internal.CronTriggerServiceImpl;
+import org.openstack4j.openstack.workflow.internal.TaskExecutionServiceImpl;
+import org.openstack4j.openstack.workflow.internal.WorkbookDefinitionServiceImpl;
+import org.openstack4j.openstack.workflow.internal.WorkflowDefinitionServiceImpl;
+import org.openstack4j.openstack.workflow.internal.WorkflowEnvironmentServiceImpl;
+import org.openstack4j.openstack.workflow.internal.WorkflowExecutionServiceImpl;
+import org.openstack4j.openstack.workflow.internal.WorkflowServiceImpl;
 
 import com.google.common.collect.Maps;
-import org.openstack4j.openstack.workflow.internal.*;
 
 /**
  * Simple API Provider which keeps internally Maps interface implementations as singletons
@@ -375,6 +393,7 @@ public class DefaultAPIProvider implements APIProvider {
         bind(NetworkService.class, NetworkServiceImpl.class);
         bind(SFCService.class, SFCServiceImpl.class);
         bind(FlowClassifierService.class, FlowClassifierServiceImpl.class);
+        bind(PortPairService.class, PortPairServiceImpl.class);
         bind(ArtifactService.class, ArtifactServiceImpl.class);
         bind(ToscaTemplatesArtifactService.class, ToscaTemplatesArtifactServiceImpl.class);
         bind(SubnetService.class, SubnetServiceImpl.class);
