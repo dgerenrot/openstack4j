@@ -13,4 +13,9 @@ public interface SFCService extends RestService {
      * @return the Flow Classifier Service API
      */
      FlowClassifierService flowclassifiers();
+
+     /**
+      * @return the Port Chain Service API
+      */
+      PortChainService portchains();
 }

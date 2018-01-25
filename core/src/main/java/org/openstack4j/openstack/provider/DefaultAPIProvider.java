@@ -107,6 +107,7 @@ import org.openstack4j.api.networking.ext.LoadBalancerService;
 import org.openstack4j.api.networking.ext.LoadBalancerV2Service;
 import org.openstack4j.api.networking.ext.MemberService;
 import org.openstack4j.api.networking.ext.NetQuotaService;
+import org.openstack4j.api.networking.ext.PortChainService;
 import org.openstack4j.api.networking.ext.SFCService;
 import org.openstack4j.api.networking.ext.VipService;
 import org.openstack4j.api.octavia.OctaviaService;
@@ -271,6 +272,7 @@ import org.openstack4j.openstack.networking.internal.ext.LoadBalancerServiceImpl
 import org.openstack4j.openstack.networking.internal.ext.LoadBalancerV2ServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.MemberServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.NetQuotaServiceImpl;
+import org.openstack4j.openstack.networking.internal.ext.PortChainServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.SFCServiceImpl;
 import org.openstack4j.openstack.networking.internal.ext.VipServiceImpl;
 import org.openstack4j.openstack.octavia.internal.OctaviaServiceImpl;
@@ -375,6 +377,7 @@ public class DefaultAPIProvider implements APIProvider {
         bind(NetworkService.class, NetworkServiceImpl.class);
         bind(SFCService.class, SFCServiceImpl.class);
         bind(FlowClassifierService.class, FlowClassifierServiceImpl.class);
+        bind(PortChainService.class, PortChainServiceImpl.class);
         bind(ArtifactService.class, ArtifactServiceImpl.class);
         bind(ToscaTemplatesArtifactService.class, ToscaTemplatesArtifactServiceImpl.class);
         bind(SubnetService.class, SubnetServiceImpl.class);
